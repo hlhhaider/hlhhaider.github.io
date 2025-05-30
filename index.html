@@ -1,20 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Haider's Portfolio</title>
+  <title>Haider Ehsan Khan | Mechanical Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans leading-relaxed">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+  <!-- Dark Mode Toggle Button -->
+  <div class="fixed top-4 right-4 z-50">
+    <button id="toggleDark" class="bg-gray-800 text-white px-4 py-2 rounded shadow hover:bg-gray-700 dark:bg-white dark:text-gray-800">
+      Toggle Dark Mode
+    </button>
+  </div>
 
-  <!-- Navbar -->
-  <header class="bg-white shadow-md fixed w-full z-10 top-0">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">Haider Ehsan Khan</h1>
-      <nav class="space-x-4">
-        <a href="#home" class="hover:text-blue-600">Home</a>
+  <!-- Hero Fullscreen Banner -->
+  <section id="home" class="h-screen bg-gradient-to-br from-gray-900 to-gray-700 text-white flex flex-col justify-center items-center text-center">
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Haider Ehsan Khan</h1>
+    <p class="text-xl md:text-2xl font-light mb-6">Mechanical Engineer | Project Specialist | Tech Learner</p>
+    <a href="resume.pdf" download class="bg-white text-gray-900 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition">Download Resume</a>
+  </section>
+
+  <!-- Sticky Nav -->
+  <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h2 class="text-lg font-bold">Haider Ehsan Khan</h2>
+      <nav class="space-x-4 text-sm">
         <a href="#about" class="hover:text-blue-600">About</a>
         <a href="#skills" class="hover:text-blue-600">Skills</a>
         <a href="#projects" class="hover:text-blue-600">Projects</a>
@@ -23,72 +42,88 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="bg-blue-100 text-center py-32 mt-16">
-    <h2 class="text-5xl font-bold mb-4">Hi, I'm Haider</h2>
-    <p class="text-xl mb-6">Mechanical Engineer & Web Developer</p>
-    <a href="resume.pdf" download class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700 transition">
-      Download Resume
-    </a>
-  </section>
-
   <!-- About Section -->
-  <section id="about" class="max-w-5xl mx-auto p-8">
-    <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-    <p class="text-lg text-gray-700 text-center">
-      I’m a mechanical engineer with a passion for digital product development, clean design, and problem solving.
-      My strengths lie in CAD design, HVAC systems, project execution, and web-based tools.
-    </p>
+  <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-700 dark:text-gray-300 text-lg">A dedicated mechanical engineer with expertise in design, project management, and manufacturing. Skilled in delivering innovative solutions to engineering challenges, driving team success, and improving operational efficiency. Fast learner and a team player focused on innovation and impact.</p>
+    </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="bg-white py-12">
-    <div class="max-w-5xl mx-auto px-8">
-      <h2 class="text-3xl font-bold mb-6 text-center">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
-        <div class="bg-blue-50 p-4 rounded shadow">AutoCAD / SolidWorks</div>
-        <div class="bg-blue-50 p-4 rounded shadow">HVAC Design & Maintenance</div>
-        <div class="bg-blue-50 p-4 rounded shadow">Project Management</div>
-        <div class="bg-blue-50 p-4 rounded shadow">Material Science</div>
-        <div class="bg-blue-50 p-4 rounded shadow">MS Office Suite</div>
-        <div class="bg-blue-50 p-4 rounded shadow">Thermodynamics</div>
+  <section id="skills" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">AutoCAD / SolidWorks</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">HVAC Design & Maintenance</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Project Management</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Thermodynamics</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Material Science</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">MS Office Suite</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Manufacturing Techniques</div>
+        <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Teamwork & Fast Learning</div>
       </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-12 bg-gray-100">
-    <div class="max-w-5xl mx-auto px-8">
-      <h2 class="text-3xl font-bold mb-6 text-center">Projects</h2>
-      <div class="grid gap-6 md:grid-cols-2">
-        <div class="bg-white p-6 rounded shadow">
-          <h3 class="text-xl font-semibold mb-2">Doctor Appointment App</h3>
-          <p>Developed a smart system for booking medical appointments without queueing delays.</p>
+  <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-10">Projects & Internships</h2>
+      <div class="grid gap-10 md:grid-cols-2">
+        <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Hybrid Electric Vehicle Study</h3>
+          <p class="text-gray-700 dark:text-gray-300">Analyzed hybrid energy-efficient systems, reducing powertrain energy losses by 10% through optimized designs and component-level simulation.</p>
         </div>
-        <div class="bg-white p-6 rounded shadow">
-          <h3 class="text-xl font-semibold mb-2">Remote Job Finder</h3>
-          <p>Created a platform that lists real remote jobs in India using free public APIs.</p>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">RFID Ignition System</h3>
+          <p class="text-gray-700 dark:text-gray-300">Designed a secure ignition system using RFID technology to improve user convenience and vehicle safety by integrating contactless activation.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Innovation & Entrepreneurship Intern (2023)</h3>
+          <p class="text-gray-700 dark:text-gray-300">Created business models and startup strategies. Improved project viability by 20% while strengthening entrepreneurial thinking and technical communication.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-700 p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Project Engineer Intern – Water Supply Projects (2024)</h3>
+          <p class="text-gray-700 dark:text-gray-300">Worked on pipeline and supply infrastructure. Enhanced operational efficiency by 15% through optimized planning and preventive maintenance strategies.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-blue-50 py-12">
+  <!-- Contact Section with Form -->
+  <section id="contact" class="py-20">
     <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
-      <p class="mb-2">📧 <a href="mailto:hlhhaider@gmail.com" class="text-blue-600">hlhhaider@gmail.com</a></p>
-      <p class="mb-4">📱 <a href="tel:+918789385053" class="text-blue-600">+91 8789385053</a></p>
-      <div class="space-x-4 mt-4">
-        <a href="https://linkedin.com/in/hlhhaider" class="text-blue-700 font-semibold hover:underline" target="_blank">LinkedIn</a>
-        <a href="https://github.com/haiderehsan" class="text-gray-800 font-semibold hover:underline" target="_blank">GitHub</a>
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <form action="mailto:hlhhaider@gmail.com" method="POST" enctype="text/plain" class="space-y-4 text-left">
+        <input type="text" name="name" placeholder="Your Name" class="w-full p-3 border rounded dark:bg-gray-800 dark:border-gray-600" required>
+        <input type="email" name="email" placeholder="Your Email" class="w-full p-3 border rounded dark:bg-gray-800 dark:border-gray-600" required>
+        <textarea name="message" rows="4" placeholder="Your Message" class="w-full p-3 border rounded dark:bg-gray-800 dark:border-gray-600" required></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Send</button>
+      </form>
+      <div class="mt-6">
+        <p class="mb-2">📧 <a href="mailto:hlhhaider@gmail.com" class="text-blue-600">hlhhaider@gmail.com</a></p>
+        <p class="mb-4">📱 <a href="tel:+918789385053" class="text-blue-600">+91 8789385053</a></p>
+        <div class="space-x-4">
+          <a href="https://www.linkedin.com/in/hlhhaider" class="text-blue-700 font-semibold hover:underline" target="_blank">LinkedIn</a>
+          <a href="https://github.com/haiderehsan" class="text-gray-800 font-semibold hover:underline" target="_blank">GitHub</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer class="text-center py-4 text-sm bg-white shadow mt-8">
+  <!-- Footer -->
+  <footer class="text-center py-6 text-sm bg-gray-100 dark:bg-gray-800 border-t dark:border-gray-700">
     &copy; 2025 Haider Ehsan Khan. All rights reserved.
   </footer>
 
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggleDark = document.getElementById('toggleDark');
+    toggleDark.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  </script>
 </body>
 </html>
