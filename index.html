@@ -7,29 +7,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
+      darkMode: 'class'
     }
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M9Z37VBN5H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M9Z37VBN5H');
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    body { font-family: sans-serif; }
   </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
-  <!-- Dark Mode Toggle Button -->
   <div class="fixed top-4 right-4 z-50">
     <button id="toggleDark" class="bg-gray-800 text-white px-4 py-2 rounded shadow hover:bg-gray-700 dark:bg-white dark:text-gray-800">
       Toggle Dark Mode
     </button>
   </div>
 
-  <!-- Hero Fullscreen Banner -->
   <section id="home" class="h-screen bg-gradient-to-br from-gray-900 to-gray-700 text-white flex flex-col justify-center items-center text-center">
     <h1 class="text-5xl md:text-7xl font-extrabold mb-4">Haider Ehsan Khan</h1>
     <p class="text-xl md:text-2xl font-light mb-6">Mechanical Engineer | Project Specialist | Tech Learner</p>
-    <a href="resume.pdf" download class="bg-white text-gray-900 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition">Download Resume</a>
+    <a href="resume.pdf" download onclick="gtag('event', 'resume_download', { event_category: 'resume', event_label: 'Resume PDF' })" class="bg-white text-gray-900 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition">Download Resume</a>
   </section>
 
-  <!-- Sticky Nav -->
   <header class="bg-white dark:bg-gray-800 shadow sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
       <h2 class="text-lg font-bold">Haider Ehsan Khan</h2>
@@ -37,12 +42,13 @@
         <a href="#about" class="hover:text-blue-600">About</a>
         <a href="#skills" class="hover:text-blue-600">Skills</a>
         <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#certifications" class="hover:text-blue-600">Certifications</a>
+        <a href="#blog" class="hover:text-blue-600">Blog</a>
         <a href="#contact" class="hover:text-blue-600">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- About Section -->
   <section id="about" class="py-20 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">About Me</h2>
@@ -50,11 +56,10 @@
     </div>
   </section>
 
-  <!-- Skills Section -->
   <section id="skills" class="py-20">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-gray-800 dark:text-gray-100">
         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">AutoCAD / SolidWorks</div>
         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">HVAC Design & Maintenance</div>
         <div class="bg-gray-100 dark:bg-gray-700 p-4 rounded shadow">Project Management</div>
@@ -67,7 +72,6 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
   <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-6xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-10">Projects & Internships</h2>
@@ -92,7 +96,35 @@
     </div>
   </section>
 
-  <!-- Contact Section with Form -->
+  <section id="certifications" class="py-20 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Certifications</h2>
+      <ul class="text-lg text-gray-700 dark:text-gray-300 space-y-2">
+        <li>✔️ HVAC System Design & Installation (Comfort Design, 2024)</li>
+        <li>✔️ Training and Development (NPTEL, 2023)</li>
+        <li>✔️ Principle of Casting Technology (NPTEL, 2023)</li>
+        <li>✔️ Entrepreneurship & Innovation Internship (2023)</li>
+        <li>✔️ CAD/CAE Tools – SolidWorks, AutoCAD</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="blog" class="py-20 bg-white dark:bg-gray-900">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Mini Blog</h2>
+      <div class="space-y-4 text-left text-gray-800 dark:text-gray-100">
+        <div class="border-l-4 border-blue-500 pl-4">
+          <h3 class="text-xl font-semibold">🚀 What I Learned in My Internship</h3>
+          <p class="text-sm">From documentation to maintenance planning, I gained hands-on experience with real infrastructure. Learning to coordinate between site teams and clients was a big milestone.</p>
+        </div>
+        <div class="border-l-4 border-blue-500 pl-4">
+          <h3 class="text-xl font-semibold">🔧 Designing with Purpose</h3>
+          <p class="text-sm">Working on the RFID ignition project made me realize how technology can be simple yet powerful. One tag, one key, secure ignition!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="py-20">
     <div class="max-w-xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
@@ -113,12 +145,10 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center py-6 text-sm bg-gray-100 dark:bg-gray-800 border-t dark:border-gray-700">
     &copy; 2025 Haider Ehsan Khan. All rights reserved.
   </footer>
 
-  <!-- Dark Mode Toggle Script -->
   <script>
     const toggleDark = document.getElementById('toggleDark');
     toggleDark.addEventListener('click', () => {
